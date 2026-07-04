@@ -24,7 +24,7 @@ def registrar():
             cursor = conexion.cursor()
             consulta = """
             INSERT INTO empleados (identificacion, nombre, apellido, telefono, cargo, salario)
-            VALUES (%S, %S, %S, %S, %S, %S)
+            VALUES (%s, %s, %s, %s, %s, %s)
             """	
             datos = (identificacion, nombre, apellido, telefono, cargo, salario)
             cursor.execute(consulta, datos)
@@ -64,8 +64,8 @@ def actualizar_empleado():
         cursor = conexion.cursor()
         consultar = """
         UPDATE compleados SET
-        nombre = %S, apellido =%S, telefono = %S, cargo = %S, salario = %S
-        WHERE id = %S;
+        nombre = %s, apellido =%s, telefono = %s, cargo = %s, salario = %s
+        WHERE id = %s;
         """
 
         datos = (nombre, apellido, telefono, cargo, salario, id)
@@ -86,7 +86,7 @@ def eliminar():
         try:
             conexion = conectar()
             cursor = conexion.cursor()
-            cosultar = """ DELETE FROM emleado WHERE identificacion = %S """
+            cosultar = """ DELETE FROM emleado WHERE identificacion = %s """
             datos=(doc,)
             cursor.execute(consultar, datos)
             conexion.close()
