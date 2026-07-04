@@ -8,7 +8,7 @@
 <body>
     <div class="container mt-5">
         <h1 class="mb-4">Registar Empleado</h1>
-        <form action="/ProyectoSENA/registrar" method="POST">
+        <form action="{{ url_for('registrar') }}" method="POST">
             <div class="form-group">
              <label for="identificacion">Identificaión:</labl>
              <input type="text" value="111" class="form-control" id="identificacion" name="identificacion" required>
