@@ -10,7 +10,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
     
-@app.route("/registrar", methods=["GET", "POST"])
+@app.route("/ProyectoSENA/registrar", methods=["GET", "POST"])
 def registrar():
     if request.method=="POST":
         identificacion = request.form ["identificacion"]
@@ -41,7 +41,7 @@ def registrar():
     else:
         return render_template("registrar.html")
     
-@app.route("/consultar", methods=["GET"])
+@app.route("/ProyectoSENA/consultar", methods=["GET"])
 def consultar():
     conexion = conectar()
     cursor = conexion.cursor()
@@ -51,7 +51,7 @@ def consultar():
     desconectar(conexion)
     return render_template("consultar.html", datos=datos)
 
-@app.route("/actualizar_empleado", methods=["POST"])
+@app.route("/ProyectoSENA/actualizar_empleado", methods=["POST"])
 def actualizar_empleado():
     id = request.form["id"]
     nombre = request.form["nombre"]
@@ -79,7 +79,7 @@ def actualizar_empleado():
             desconectar(conexion)
             cursor.close()
     
-@app.route("/eliminar", methods=["GET","POST"])
+@app.route("/ProyectoSENA/eliminar", methods=["GET","POST"])
 def eliminar():
     if request.method == "POST":
         doc = request.form["ident"]
