@@ -1,0 +1,38 @@
+<div class="modal fade" id="modalActualizar{{ empleado[0] }}" role="dialog" aria-labelledby="modalActualizar{{ empleadp[0] }}" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalActualizar{{ empleado[0] }}label">Actializar Empleado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true">&tilde;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <from action="/ProyectoSENA/actualizar-emplaedo" method="post">
+                    <input type="hidden" name="id" value="{{ empleado[0] }}">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</labl>
+                        <input type="text" class="form-control" id="nombre" name="nombre" value="{{ empleado[2] }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</labl>
+                        <input type="text" class="form-control" id="apellido" name="apellido" value="{{ empleado[3] }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</labl>
+                        <input type="text" class="form-control" id="telefono" name="telefono" value="{{ empleado[4] }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="cargo">Cargo:</labl>
+                        <input type="text" class="form-control" id="cargo" name="cargo" value="{{ empleado[2]}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="salario">Salario:</labl>
+                        <input type="text" class="form-control" id="salaro" name="salario" value="{{ empleado[2]}}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </from>
+            </div>
+        </div>
+    </div>
+</div>

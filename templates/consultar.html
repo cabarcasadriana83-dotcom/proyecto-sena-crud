@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Empleados</title>
+    {% include  'bootstrap.html' %}
+</head>
+<body>
+    {% include 'menu.html' %}
+    <div class="container">
+        <h2 class="mt-4 mb-4">Lista de Empleados</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Identificación</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Telefono</th>
+                    <th>Cargo</th>
+                    <th>Salario</th>
+                    <th>Accionea</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for empleados in dato %}
+                   <tr>
+                     <td>{{ empleado[1] }}</td> <!-- Identificación -->
+                     <td>{{ empleado[2] }}</td> <!-- Nombre -->
+                     <td>{{ empleado[3] }}</td> <!-- Apellido -->
+                     <td>{{ empleado[4] }}</td> <!-- Telefono -->
+                     <td>{{ empleado[5] }}</td> <!-- Cargo -->
+                     <td>{{ empleado[6] }}</td> <!-- Salario -->
+                       <td>
+                           <!-- Botón para abrir el modal -->
+                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalActualizar{{ empleado[0] }}">
+                             Actualiza
+                           </button>
+                       </td>
+                   </tr>
+                  {% include 'editar.html' %}
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/PreyetoSENA" class="btn btn-warning">Ir al Inicio</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.47dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

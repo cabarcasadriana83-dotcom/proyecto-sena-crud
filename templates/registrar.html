@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar Empleado</title>
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Registar Empleado</h1>
+        <form action="/ProyectoSENA/registrar" method="POST">
+            <div class="form-group">
+             <label for="identificacion">Identificaión:</labl>
+             <input type="text" value="111" class="form-control" id="identificacion" name="identificacion" required>
+            </div>
+            <div class="form-group">
+             <label for="nombre">Nombre:</labl>
+             <input type="text" value="Ivan" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+             <label for="apellido">Apellido:</labl>
+             <input type="text" value="Lopez" class="form-control" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono:</labl>
+             <input type="text" value="3120627215" class="form-control" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+             <label for="cargo">Cargo:</labl>
+             <input type="text" value="programador" class="form-control" id="cargo" name="cargo" required>
+            </div>
+            <div class="form-group">
+             <label for="salario">Salario:</labl>
+             <input type="text" value="12000000" class="form-control" id="salaro" name="salario" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Empleado</button>
+            <a href="/ProyectoSENA" class="btn btn-warning">Ir al Inicio</a>
+        </form>
+    </div>
+</body>
+</html>

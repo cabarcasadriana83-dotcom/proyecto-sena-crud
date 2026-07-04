@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+    {% include 'bootstrap.html' %}
+    <style> 
+        body{
+            background-image: url('{{url_for("static", filename="fondo.jpg") }}');
+            
+        }
+        .resaltado{
+            font-size: 24px;
+            text-align:center ;
+            padding: 20px;
+            margin: 200px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'menu.html'%}
+    <div class="container mt-5">
+        <div class="resaltado">
+            Tecnico en Programacion de Software
+        </div>
+    </div>
+    
+</body>
+</html>

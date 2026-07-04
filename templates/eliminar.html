@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Empleado</title>
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    <div class="container mt=5">
+        <h1 class="mb-4">Eliminar Empleado</h1>
+        <form action="/ProyectoSENA/eliminar" method="POST">
+            <div class="form-group">
+                <label for="ident">Identificaión:</label>
+                <input type="text" value="111" class="form-control" id="ident" name="ident" required>
+            </div>
+            <p><em>Estimado usuario esta acción no tiene marcha atrá.</em></p>
+            <button type="submit" class="btn btn-danger">Eliminar Empleado</button>
+            <a href="/ProyectoSENA/consultar" class="btn btn-warning">Ver emleado</a>
+        </form>
+    </div>
+</body>
+</html>
